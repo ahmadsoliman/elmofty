@@ -7,20 +7,21 @@
     "dev": "vite --port 5001",
     "setup-env": "node setup-env.js",
     "activate-env": "source venv/bin/activate",
-    "backend": "python3 backend/main.py",
+    "backend": "cd backend && uvicorn main:app --reload",
     "backend-win": "venv\\Scripts\\activate && python backend/main.py",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.20",
+    "@mui/material": "^5.14.20",
+    "i18next": "^23.7.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.5.0",
-    "i18next": "^23.7.6",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.20",
-    "@mui/icons-material": "^5.14.20"
+    "react-markdown": "^9.0.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",

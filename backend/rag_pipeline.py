@@ -29,7 +29,7 @@ def query_matching_engine(embedding, num_neighbors=3):
     datapoint = aiplatform_v1.IndexDatapoint(feature_vector=embedding)
     query = aiplatform_v1.FindNeighborsRequest.Query(
         datapoint=datapoint,
-        neighbor_count=5,
+        neighbor_count=10,
     )
     request = aiplatform_v1.FindNeighborsRequest(
         index_endpoint=INDEX_ENDPOINT,
